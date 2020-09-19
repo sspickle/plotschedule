@@ -23,5 +23,7 @@ Changes: 0.11 now works with excel too!
 
 Changes: 0.12 allow for times that are already converted into 'float' hours (e.g. 8:30 AM -> 8.5, etc.)
 
+Changes: 0.14 (yeah, skip 0.13!) reorganize __init__.py to put the function an module scope.
+
 
 
