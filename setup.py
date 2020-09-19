@@ -4,7 +4,7 @@ with open('README.md') as f:
     long_description = f.read()
 
 setup(name='plotschedule',
-      version='0.10',
+      version='0.11',
       description='A simple matplotlib based schedule plotter',
       long_description=long_description,
       long_description_content_type='text/markdown',

@@ -19,5 +19,8 @@ And you'd get this output:
 
 You can also add a `color` column and use matplotlib colors.
 
+Changes: 0.11 now works with excel too!
+
+
 
 
