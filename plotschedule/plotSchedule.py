@@ -1,19 +1,22 @@
 import matplotlib.pyplot as plt
 import os
-import dateutil
+from dateutil import parser
 import datetime
 from random import random
 
-start_t=dateutil.parser.parse("00:00 AM") # midnight to compare start times
+start_t=parser.parse("00:00 AM") # midnight to compare start times
     
-def timeToSeconds(timeString):
+def timeToSeconds(timeVal):
     result = None
-    if timeString:
-        try:
-            result = dateutil.parser.parse(timeString) - start_t
-            result = result.seconds*1.0/3600
-        except:
-            raise RuntimeError("Ack! I cannot interpret this as a time:" + timeString)
+    if timeVal:
+        if type(timeVal)==type(''):
+            try:
+                result = parser.parse(timeVal) - start_t
+            except:
+                raise RuntimeError("Ack! I cannot interpret this as a time:" + timeString)
+        else:
+            result = datetime.datetime(start_t.year, start_t.month, start_t.day, timeVal.hour, timeVal.minute, timeVal.second) - start_t
+        result = result.seconds*1.0/3600
     else:
         raise RuntimeError("Sorry, I need a string to parse for a time.")
     return result

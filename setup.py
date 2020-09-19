@@ -16,6 +16,7 @@ setup(name='plotschedule',
       install_requires=[
           'matplotlib',
           'pandas',
+          'xlrd',
       ],
       zip_safe=False,
       entry_points = {
