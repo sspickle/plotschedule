@@ -1,0 +1,4 @@
+,begin,end,days,Label1,Label2,Label3
+0,08:00 AM,08:50 AM,MW,One,Two,Three
+1,10:00 AM,11:50 AM,TRF,Yes,No,Maybe
+2,03:00 PM,03:50 PM,MWF,Foo,Bar,Baz

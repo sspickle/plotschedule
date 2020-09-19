@@ -1,0 +1,7 @@
+*~
+.DS_*
+Icon*
+__pycache__
+*.png
+plotschedule.egg-info
+/dist
