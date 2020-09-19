@@ -21,6 +21,7 @@ You can also add a `color` column and use matplotlib colors.
 
 Changes: 0.11 now works with excel too!
 
+Changes: 0.12 allow for times that are already converted into 'float' hours (e.g. 8:30 AM -> 8.5, etc.)
 
 
 

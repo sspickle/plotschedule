@@ -12,16 +12,23 @@ def timeToSeconds(timeVal):
         if type(timeVal)==type(''):
             try:
                 result = parser.parse(timeVal) - start_t
+                result = result.seconds*1.0/3600
             except:
                 raise RuntimeError("Ack! I cannot interpret this as a time:" + timeString)
+        elif type(timeVal)==type(0.0):
+            # already a float... assume it's hours and leave it alone
+            result = timeVal
         else:
             result = datetime.datetime(start_t.year, start_t.month, start_t.day, timeVal.hour, timeVal.minute, timeVal.second) - start_t
-        result = result.seconds*1.0/3600
+            result = result.seconds*1.0/3600
     else:
         raise RuntimeError("Sorry, I need a string to parse for a time.")
     return result
 
 def mapColor(newDict, d, i, colorMap, gcolors):
+    """
+    Figure out what color to use for each tag or index
+    """
     colorTag = d.get('color',i)
     if type(colorTag)!=type(''):
         c=colorMap.get(colorTag,None)
