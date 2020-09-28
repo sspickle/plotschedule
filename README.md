@@ -15,7 +15,7 @@ For this CSV you could use this command line:
 
 And you'd get this output:
 
-![Result](example/bar.png)
+![Result](https://raw.githubusercontent.com/sspickle/plotschedule/master/example/bar.png)
 
 You can also add a `color` column and use matplotlib colors.
 

@@ -14,11 +14,12 @@ def main():
     parser.add_argument('--labels','-l', nargs='+', default=None, help='columns for labels per event')
     parser.add_argument('--output','-o', help="output filename")
     parser.add_argument('--title','-t', help="plot title")
+    parser.add_argument('--sheet','-s', help="sheet name to load", default=0)
 
     args = parser.parse_args()
 
     file_path = args.file_path
-    path,fname = os.path.split(file_path)
+    _, fname = os.path.split(file_path)
     bare_filename, ext = os.path.splitext(fname)
     outfile = args.output or bare_filename + '.png'
     title = args.title or 'Schedule'
@@ -27,7 +28,7 @@ def main():
         if ext == '.csv':
             df = pd.read_csv(file_path).fillna('')
         else:
-            df = pd.read_excel(file_path).fillna('')
+            df = pd.read_excel(file_path, sheet_name=args.sheet).fillna('')
 
         print("found columns:", df.columns)
         sched = df.to_dict('records')
