@@ -25,5 +25,9 @@ Changes: 0.12 allow for times that are already converted into 'float' hours (e.g
 
 Changes: 0.14 (yeah, skip 0.13!) reorganize __init__.py to put the function an module scope.
 
+Changes: 0.15 Added --sheet argument to pull a particular sheet from an excel file.
+
+
+
 
 
