@@ -71,7 +71,7 @@ def plotSchedule(scheds, mainLabel="Schedule"):
 
     for k,r,v in clDicts:
         for d in v['days']:
-            xi=dayMap[d]-0.4
+            xi=dayMap.get(d,6)-0.4
             xf=xi+0.8
             yi=v['beg_t']
             yf=v['end_t']
